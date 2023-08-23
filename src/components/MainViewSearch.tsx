@@ -71,7 +71,7 @@ const MainView = ({ artistId }: ArtistProps) => {
   ) : (
     <div className="item-2">
       <section className="artist-container">
-        <h2>Top result</h2>
+        <h2>Last Searched</h2>
         <div className="card-artist">
           <div className="img-container">
             <div>
