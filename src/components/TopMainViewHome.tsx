@@ -19,7 +19,7 @@ const TopMainViewHome = () => {
           )}
         </div>
       </div>
-      <MainViewHome user={user} />
+      <MainViewHome />
     </>
   );
 };
