@@ -1,0 +1,29 @@
+@use "sass:math";
+
+.card-artist {
+  background: #181818;
+  padding: 20px;
+  width: 420px;
+  height: 237.8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: $base-border-radius + 1;
+  gap: 20px;
+
+  img {
+    height: 92px;
+    width: 92px;
+    border-radius: 50%;
+  }
+  h1 {
+    font-size: $font-size-xl;
+    color: white;
+  }
+  p {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 500px;
+    color: #fff;
+    width: 50px;
+    padding: 4px 12px;
+  }
+}

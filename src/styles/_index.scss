@@ -1,0 +1,126 @@
+@import "variables";
+@import "colors";
+@import "base";
+@import "components/card";
+
+.error-message {
+  color: $error;
+}
+
+#main {
+  height: 100vh;
+}
+
+.grid {
+  height: 100%;
+  width: 99%;
+  background-color: #000;
+  display: grid;
+  gap: 8px;
+  grid-template-areas:
+    "left-sidebar top-view right-sidebar"
+    "left-sidebar main-view right-sidebar"
+    "now-playing-bar now-playing-bar now-playing-bar";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 8px;
+  position: relative;
+  .navbar {
+    gap: 8px;
+    height: 100%;
+    .sidenav-container {
+      color: grey;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: flex-start;
+      .home-active {
+        color: #fff;
+      }
+      a {
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    .sidenav-footer {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        color: grey;
+      }
+    }
+  }
+
+  .item {
+    &-1 {
+      width: 200px;
+      grid-area: left-sidebar;
+      background-color: $base-color;
+      border-radius: $base-border-radius;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+    &-2 {
+      grid-area: main-view;
+      background-color: $base-color;
+      border-radius: $base-border-radius;
+      height: 100%;
+      h2 {
+        color: white;
+      }
+    }
+    &-5 {
+      grid-area: top-view;
+      background-color: $base-color;
+      border-radius: $base-border-radius;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      input {
+        background-color: #242424;
+        border: 0;
+        border-radius: 500px;
+        color: #fff !important;
+        height: 48px;
+        padding: 6px 36px;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+      img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        p {
+          color: white;
+        }
+      }
+    }
+    &-3 {
+      grid-area: right-sidebar;
+      width: 200px;
+      background-color: $base-color;
+      border-radius: $base-border-radius;
+      padding: 10px 20px;
+    }
+    &-4 {
+      grid-area: now-playing-bar;
+      background-color: #000;
+      border-radius: $base-border-radius;
+      height: 72px;
+    }
+  }
+}
