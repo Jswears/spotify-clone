@@ -52,9 +52,7 @@ export const spotifyService = {
   },
   getTopTracks: async (id: string) => {
     try {
-      const response = await spotifyApi.getArtistTopTracks(id, "GB", {
-        limit: 4,
-      });
+      const response = await spotifyApi.getArtistTopTracks(id, "GB");
       return response;
     } catch (error) {
       throw error;

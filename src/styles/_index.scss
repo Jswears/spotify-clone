@@ -74,8 +74,31 @@
       background-color: $base-color;
       border-radius: $base-border-radius;
       height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .songs-container {
+        color: #fff;
+        width: 50%;
+        button {
+          height: 38px;
+          width: 38px;
+          color: #000;
+        }
+        .songs {
+          display: flex;
+          gap: 20px;
+          p {
+            color: grey;
+            font-size: 12px;
+          }
+          img {
+            height: 40px;
+          }
+        }
+      }
       h2 {
-        color: white;
+        color: #fff;
       }
     }
     &-5 {

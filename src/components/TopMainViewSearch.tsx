@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { spotifyService } from "../services/spotifyClient";
 import MainView from "./MainViewSearch";
 import { UserContext } from "../context/UserContext";
@@ -18,6 +18,7 @@ const TopMainView = () => {
         if (response.artists.items.length > 0) {
           const artistId = response.artists.items[0].id;
           setArtistId(artistId);
+          localStorage.setItem("artistId", artistId);
           // navigate(`/search/${artistId}`);
         } else {
           setError("No artist found");
@@ -32,6 +33,12 @@ const TopMainView = () => {
     e.preventDefault();
     fetchArtistData();
   };
+  useEffect(() => {
+    const storedArtistId = localStorage.getItem("artistId");
+    if (storedArtistId) {
+      setArtistId(storedArtistId);
+    }
+  }, []);
   return !user ? (
     <p>Loading...</p>
   ) : (
