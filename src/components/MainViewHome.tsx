@@ -1,12 +1,9 @@
+// type UserProps = {
+//   user: SpotifyApi.UserProfileResponse | undefined;
+// };
 
-
-type UserProps = {
-  user: SpotifyApi.UserProfileResponse | undefined;
-};
-
-const MainViewHome = ({ user }: UserProps) => {
-
-
+// { user }: UserProps i have to pass that eventually
+const MainViewHome = () => {
   return <div className="item-2"></div>;
 };
 
