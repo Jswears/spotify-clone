@@ -127,8 +127,14 @@ You can also build and run this project using Docker. Follow these steps:
    ```sh
    docker build --build-arg VITE_CLIENT_ID=${YOUR_SPOTIFY_CLIENT_ID} --build-arg VITE_CLIENT_SECRET=${YOUR_SPOTIFY_CLIENT_SECRET} -t spotify-clone .
    ```
+4. Change the .env file with the following:
 
-4. Once the Docker image is built, you can start the application using:
+   ```sh
+   RUN echo "VITE_CLIENT_ID=${VITE_CLIENT_ID}" > .env
+   RUN echo "VITE_CLIENT_SECRET=${VITE_CLIENT_SECRET}" >> .env
+``
+
+5. Once the Docker image is built, you can start the application using:
 
    ```sh
    docker run -p 80:80 spotify-clone
