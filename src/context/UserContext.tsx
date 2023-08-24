@@ -18,7 +18,6 @@ const UserContextWrapper = (props: Props) => {
       await spotifyService.retrieveToken();
       const response = await spotifyService.getUser("j.swearssalinas");
       setUser(response);
-      console.log(response);
     } catch (error) {
       console.log(error);
     }

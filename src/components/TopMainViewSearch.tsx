@@ -14,12 +14,11 @@ const TopMainView = () => {
       await spotifyService.retrieveToken();
       if (searchArtist) {
         const response = await spotifyService.searchArtists(searchArtist);
-        console.log(response);
         if (response.artists.items.length > 0) {
           const artistId = response.artists.items[0].id;
           setArtistId(artistId);
           localStorage.setItem("artistId", artistId);
-          // navigate(`/search/${artistId}`);
+          setError("");
         } else {
           setError("No artist found");
         }
@@ -51,13 +50,17 @@ const TopMainView = () => {
                 type="text"
                 name="artist"
                 value={searchArtist}
-                placeholder="What do you want to listen to?"
+                placeholder="What artist you're looking for?"
                 onChange={(e) => setSearchArtist(e.target.value)}
               />
             </label>
-            {error && <p className="error-message">No Artist Found</p>}
           </form>
         </div>
+        {error && (
+          <div>
+            <p className="error-message">No Artist Found</p>
+          </div>
+        )}
         <div className="user-info">
           {" "}
           <p>{user.display_name}</p>

@@ -4,7 +4,6 @@ import { UserContext } from "../context/UserContext";
 
 const TopMainViewHome = () => {
   const user = useContext(UserContext);
-  console.log(user);
   return !user ? (
     <p>Loading...</p>
   ) : (
