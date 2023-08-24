@@ -74,7 +74,3 @@ Contributions to this project are welcome. If you'd like to contribute, please f
 If you have any questions or feedback, feel free to reach out to the project owner:
 
 - Email: ji.swearssalinas@gmail.com
-
-```
-
-```
