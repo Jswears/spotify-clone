@@ -33,7 +33,6 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#installation">Installation</a>
       <ul>
         <li><a href="#building-the-project">Building the Project</a></li>
@@ -52,11 +51,9 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
-
 [![Product Screenshot][product-screenshot]](https://github.com/Jswears/spotify-clone)
 
-Espotifai Clone is a web application that replicates some of the features of Spotify, allowing users to explore and search for artists.
+
 
 <!-- Installation -->
 
