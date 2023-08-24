@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/Jswears/spotify-clone">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./spotify-clone/src/assets/images/Spotify_logo_with_text.svg alt="Logo" height="80">
   </a>
 
   <h3 align="center">Spotify Clone</h3>
@@ -53,7 +53,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project {#about-the-project}
+## About The Project
 
 [![Product Screenshot][product-screenshot]](https://github.com/Jswears/spotify-clone)
 
@@ -61,7 +61,7 @@ Espotifai Clone is a web application that replicates some of the features of Spo
 
 <!-- Installation -->
 
-## Installation {#installation}
+## Installation
 
 To run this project locally, follow these steps:
 
@@ -91,7 +91,7 @@ To run this project locally, follow these steps:
 
 <!-- Building the Project -->
 
-## Building the Project {#building-the-project}
+## Building the Project
 
 To build the project, follow these steps:
 
@@ -113,7 +113,7 @@ This will compile and package the project, creating optimized files ready for de
 
 <!-- Building and Running with Docker -->
 
-## Building and Running with Docker {#building-and-running-with-docker}
+## Building and Running with Docker
 
 You can also build and run this project using Docker. Follow these steps:
 
@@ -145,7 +145,7 @@ You can also build and run this project using Docker. Follow these steps:
 
 <!-- Usage -->
 
-## Usage {#usage}
+## Usage
 
 Espotifai Clone offers the following main features:
 
@@ -163,7 +163,7 @@ Visit `http://localhost:5173` in your web browser to access the application.
 
 <!-- Folder Structure -->
 
-## Folder Structure {#folder-structure}
+## Folder Structure
 
 The project is organized as follows:
 
@@ -177,7 +177,7 @@ The project is organized as follows:
 
 <!-- Technologies Used -->
 
-## Technologies Used {#technologies-used}
+## Technologies Used
 
 - React
 - TypeScript
@@ -186,26 +186,26 @@ The project is organized as follows:
 
 <!-- Contributing -->
 
-## Contributing {#contributing}
+## Contributing
 
 Contributions to this project are welcome. If you'd like to contribute, please fork the repository and create a pull request.
 
 <!-- Contact Information -->
 
-## Contact Information {#contact-information}
+## Contact Information
 
 If you have any questions or feedback, feel free to reach out to the project owner:
 
 - Email: ji.swearssalinas@gmail.com
 
-## Project Links {#project-links}
+## Project Links
 
 - Project Link: [https://github.com/Jswears/spotify-clone](https://github.com/Jswears/spotify-clone)
 - Deployed: [https://github.com/Jswears/spotify-clone](https://espotifai-clone.netlify.app/search)
 
 <!-- Acknowledgments -->
 
-## Acknowledgments {#acknowledgments}
+## Acknowledgments
 
 - [arriagadadev](https://github.com/arriagadadev)
 
@@ -221,4 +221,4 @@ If you have any questions or feedback, feel free to reach out to the project own
 [issues-url]: https://github.com/Jswears/spotify-clone/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/joaquin-ignacio-swears-salinas-9a4947284/
-[product-screenshot]: /spotify-clone/src/assets/images/Screenshot%202023-08-24%20093001.png
+[product-screenshot]: ./spotify-clone/src/assets/images/Screenshot%202023-08-24%20093001.png
