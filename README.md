@@ -5,13 +5,12 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/Jswears/spotify-clone">
-    <img src="spotify-clone/src/assets/images/Spotify_logo_with_text.svg alt="Logo" height="80">
+    <img src="src/assets/images/Spotify_logo_with_text.svg"alt="Logo" height="80">
   </a>
 
   <h3 align="center">Spotify Clone</h3>
@@ -221,4 +220,4 @@ If you have any questions or feedback, feel free to reach out to the project own
 [issues-url]: https://github.com/Jswears/spotify-clone/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/joaquin-ignacio-swears-salinas-9a4947284/
-[product-screenshot]: spotify-clone/src/assets/images/Screenshot%202023-08-24%20093001.png
+[product-screenshot]: src/assets/images/Screenshot%202023-08-24%20093001.png
