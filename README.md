@@ -132,7 +132,7 @@ You can also build and run this project using Docker. Follow these steps:
    ```sh
    RUN echo "VITE_CLIENT_ID=${VITE_CLIENT_ID}" > .env
    RUN echo "VITE_CLIENT_SECRET=${VITE_CLIENT_SECRET}" >> .env
-``
+   ```
 
 5. Once the Docker image is built, you can start the application using:
 
