@@ -1,27 +1,80 @@
-# React + TypeScript + Vite
+# Spotify Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Espotifai Clone is a web application that replicates some of the features of Spotify, allowing users to explore and search for artists and discover their top 5 popular songs. This README provides essential information for setting up and using the project.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run this project locally, follow these steps:
 
-## Expanding the ESLint configuration
+1. Clone the repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```sh
+   git clone https://github.com/Jswears/spotify-clone.git
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Navigate to the project directory:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+   ```sh
+   cd spotify-clone
+   ```
+
+3. Install the project dependencies using npm:
+
+   ```sh
+   npm install
+   ```
+
+4. Create a `.env` file in the project root and add your Spotify API credentials:
+   ```
+   VITE_CLIENT_ID=<Your Client ID>
+   VITE_CLIENT_SECRET=<Your Client Secret>
+   ```
+
+## Usage
+
+Espotifai Clone offers the following main features:
+
+- **Home**: Discover the most popular artists, albums, and more (future feature).
+- **Search**: Search for artists, view their top 5 popular songs.
+  - See related artists and albums (future feature).
+
+To start the development server, run:
+
+```sh
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Visit `http://localhost:5173` in your web browser to access the application.
+
+## Folder Structure
+
+The project is organized as follows:
+
+- `components`: Contains React components used throughout the application.
+- `config`: Holds environment configuration for Spotify API credentials.
+- `context`: Includes a user context to share information across components.
+- `pages`: Defines the main pages of the application (Home and Search).
+- `services`: Manages communication with the Spotify API.
+- `styles`: Contains SCSS files for styling components.
+- `App.tsx` and `main.tsx`: Entry points for the React application.
+
+## Technologies Used
+
+- React
+- TypeScript
+- SCSS
+- SpotifyAPI
+
+## Contributing
+
+Contributions to this project are welcome. If you'd like to contribute, please fork the repository and create a pull request.
+
+## Contact Information
+
+If you have any questions or feedback, feel free to reach out to the project owner:
+
+- Email: ji.swearssalinas@gmail.com
+
+```
+
+```
