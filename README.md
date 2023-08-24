@@ -8,6 +8,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
+<br />
 <div align="center">
   <a href="https://github.com/Jswears/spotify-clone">
     <img src="src/assets/images/Spotify_logo_with_text.svg"alt="Logo" height="80">
