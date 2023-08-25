@@ -54,8 +54,6 @@
 
 [![Product Screenshot][product-screenshot]](https://github.com/Jswears/spotify-clone)
 
-
-
 <!-- Installation -->
 
 ## Installation
@@ -127,14 +125,8 @@ You can also build and run this project using Docker. Follow these steps:
    ```sh
    docker build --build-arg VITE_CLIENT_ID=${YOUR_SPOTIFY_CLIENT_ID} --build-arg VITE_CLIENT_SECRET=${YOUR_SPOTIFY_CLIENT_SECRET} -t spotify-clone .
    ```
-4. Change the .env file with the following:
 
-   ```sh
-   RUN echo "VITE_CLIENT_ID=${VITE_CLIENT_ID}" > .env
-   RUN echo "VITE_CLIENT_SECRET=${VITE_CLIENT_SECRET}" >> .env
-   ```
-
-5. Once the Docker image is built, you can start the application using:
+4. Once the Docker image is built, you can start the application using:
 
    ```sh
    docker run -p 80:80 spotify-clone
@@ -204,7 +196,7 @@ If you have any questions or feedback, feel free to reach out to the project own
 ## Project Links
 
 - Project Link: [https://github.com/Jswears/spotify-clone](https://github.com/Jswears/spotify-clone)
-- Deployed: [https://github.com/Jswears/spotify-clone](https://espotifai-clone.netlify.app/search)
+- Deployed: [https://espotifai-clone.netlify.app/search](https://espotifai-clone.netlify.app/search)
 
 <!-- Acknowledgments -->
 
