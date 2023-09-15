@@ -74,7 +74,11 @@ const MainView = ({ artistId }: { artistId: string }) => {
         <div className="card-artist">
           <div className="img-container">
             <div>
-              <img src={artist.images[0].url} alt={artist.name} />
+              {artist.images.length > 0 ? (
+                <img src={artist.images[0].url} alt={artist.name} />
+              ) : (
+                "NO image"
+              )}
             </div>
           </div>
           <div className="artist-info">
