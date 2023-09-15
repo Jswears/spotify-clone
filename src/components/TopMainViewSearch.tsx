@@ -1,36 +1,24 @@
 import { useContext, useEffect, useState } from "react";
-import { spotifyService } from "../services/spotifyClient";
 import MainView from "./MainViewSearch";
+import { spotifyService } from "../services/spotifyClient";
 import { UserContext } from "../context/UserContext";
 
 const TopMainView = () => {
   const [searchArtist, setSearchArtist] = useState<string>("");
   const [artistId, setArtistId] = useState<string>("");
-  const [error, setError] = useState<string>("");
   const user = useContext(UserContext);
 
-  const fetchArtistData = async () => {
-    try {
-      await spotifyService.retrieveToken();
-      if (searchArtist) {
-        const response = await spotifyService.searchArtists(searchArtist);
-        if (response.artists.items.length > 0) {
-          const artistId = response.artists.items[0].id;
-          setArtistId(artistId);
-          localStorage.setItem("artistId", artistId);
-          setError("");
-        } else {
-          setError("No artist found");
-        }
-      }
-    } catch (error) {
-      console.log(error);
-    }
+  // GET request  to get the artist ID
+  const fetchArtistId = async () => {
+    const artistId = await spotifyService.getArtistId(searchArtist);
+
+    setArtistId(artistId);
+    localStorage.setItem("artistId", artistId);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    fetchArtistData();
+    fetchArtistId();
   };
   useEffect(() => {
     const storedArtistId = localStorage.getItem("artistId");
@@ -38,9 +26,7 @@ const TopMainView = () => {
       setArtistId(storedArtistId);
     }
   }, []);
-  return !user ? (
-    <p>Loading...</p>
-  ) : (
+  return (
     <>
       <div className="item-5">
         <div>
@@ -56,18 +42,14 @@ const TopMainView = () => {
             </label>
           </form>
         </div>
-        {error && (
-          <div>
-            <p className="error-message">No Artist Found</p>
+        {user && (
+          <div className="user-info">
+            <p>{user.display_name}</p>
+            {user.images && user.images.length > 0 && (
+              <img src={user.images[1].url} alt={user.display_name} />
+            )}
           </div>
         )}
-        <div className="user-info">
-          {" "}
-          <p>{user.display_name}</p>
-          {user.images && user.images.length > 0 && (
-            <img src={user.images[1].url} alt={user.display_name} />
-          )}
-        </div>
       </div>
       <MainView artistId={artistId} />
     </>
