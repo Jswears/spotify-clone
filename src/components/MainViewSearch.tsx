@@ -1,25 +1,19 @@
 import { useEffect, useState } from "react";
 import { spotifyService } from "../services/spotifyClient";
+import { ArtistProps, TrackProps } from "../types";
 
-type ArtistProps = {
-  artistId: string;
-};
-
-const MainView = ({ artistId }: ArtistProps) => {
+const MainView = ({ artistId }: { artistId: string }) => {
   const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
     null
   );
-  const [artist, setArtist] = useState<SpotifyApi.SingleArtistResponse>();
-  const [tracks, setTracks] = useState<
-    SpotifyApi.TrackObjectFull[] | undefined
-  >(undefined);
+  const [artist, setArtist] = useState<ArtistProps | undefined>(undefined);
+  const [tracks, setTracks] = useState<TrackProps[] | undefined>(undefined);
 
   const fetchArtistData = async () => {
     try {
       if (artistId) {
-        await spotifyService.retrieveToken();
-        const response = await spotifyService.getArtist(artistId);
-        setArtist(response);
+        const artistData = await spotifyService.getArtist(artistId);
+        setArtist(artistData);
       }
     } catch (error) {
       console.log(error);
@@ -28,8 +22,10 @@ const MainView = ({ artistId }: ArtistProps) => {
 
   const fetchTopTracks = async () => {
     try {
-      const response = await spotifyService.getTopTracks(artistId);
-      setTracks(response.tracks.slice(0, 4));
+      if (artistId) {
+        const topTracks = await spotifyService.getArtistTopTracks(artistId);
+        setTracks(topTracks);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -58,12 +54,15 @@ const MainView = ({ artistId }: ArtistProps) => {
   };
 
   useEffect(() => {
-    fetchArtistData();
-    fetchTopTracks();
+    if (artistId) {
+      fetchArtistData();
+      fetchTopTracks();
+    }
     return () => {
       // Stop the audio when the component is unmounted
       stopAudio();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [artistId, currentAudio]);
 
   return !artist || !tracks ? (
